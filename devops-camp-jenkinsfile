@@ -48,6 +48,7 @@ pipeline {
                 
                 echo "Deployment stage"
                 //TODO("Lab 5 - Deploy to EKS"): deploy docker images
+                sh 'kubectl -n ocamara apply -f ./afs-labs-student/kubernetes/config-map.yaml'
             }
         }
     }
